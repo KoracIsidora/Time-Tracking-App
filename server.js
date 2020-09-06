@@ -1,14 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-const favicon = require("serve-favicon");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 require("dotenv/config");
 
 const app = express();
 app.use(cors());
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 app.use(bodyParser.json());
 
