@@ -1,0 +1,50 @@
+<ion-content>
+  <ion-item>
+    <ion-text color="primary">
+      <h1>Time tracker</h1>
+    </ion-text>
+  </ion-item>
+  <ion-item>
+    <ion-text color="grey">
+      <h3>Sign up</h3>
+    </ion-text>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="person-outline" color="dark"></ion-icon>
+    <ion-input
+      #FullName="ngModel"
+      placeholder="fullname"
+      color="dark"
+      [(ngModel)]="registerUserData.fullName"
+      name="fullname"
+      required
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="mail-outline" color="dark"></ion-icon>
+    <ion-input
+      #Email="ngModel"
+      placeholder="email"
+      color="dark"
+      [(ngModel)]="registerUserData.email"
+      name="email"
+      required
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="lock-open-outline"></ion-icon>
+    <ion-input
+      #Password="ngModel"
+      placeholder="password"
+      color="dark"
+      type="password"
+      [(ngModel)]="registerUserData.password"
+      required
+    ></ion-input>
+  </ion-item>
+  <br />
+
+  <ion-button class="signInButton" color="primary" (click)="registerUser()"
+    >Sign Up</ion-button
+  >
+</ion-content>

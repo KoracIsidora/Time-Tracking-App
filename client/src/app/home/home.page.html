@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-item>
+    <ion-text>
+      <h1>Time tracker</h1>
+    </ion-text>
+  </ion-item>
+  <ion-item>
+    <a (click)="signOut()">Sign out</a>
+  </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h2 class="homeText"> Your daily report is empty </h2>
+  <br />
+  <ion-text class="homeText"> Start your time and fill in report </ion-text>
+
+  <ion-button class="signInButton" color="primary" (click)="goToTracker()"
+    >Get Started</ion-button
+  >
+</ion-content>

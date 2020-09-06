@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-item>
+    <ion-text>
+      <h1>Time tracker</h1>
+    </ion-text>
+  </ion-item>
+  <ion-item>
+    <a (click)="signOut()">Sign out</a>
+  </ion-item>
+</ion-header>
+
+<ion-content>
+  <h2> Welcome </h2>
+  <h4> Your time tracker is off </h4>
+  <ion-item>
+    <ion-text class="times"> 00 </ion-text>
+    <br />
+    <ion-text class="times"> Hours </ion-text>
+    <br />
+    <ion-text class="times"> 00 </ion-text>
+    <br />
+    <ion-text class="times"> Minutes </ion-text>
+    <br />
+    <ion-text class="times"> 00 </ion-text>
+    <br />
+    <ion-text class="times"> Seconds </ion-text>
+  </ion-item>
+  <ion-button class="signInButton" (click)="startTiming()"> Start </ion-button>
+  <a>See your daily report</a>
+</ion-content>
