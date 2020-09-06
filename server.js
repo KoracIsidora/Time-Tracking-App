@@ -1,14 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-const favicon = require("serve-favicon");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 require("dotenv/config");
 
 const app = express();
 app.use(cors());
-app.use(favicon(path.join(__dirname, 'www', 'favicon.ico')))
 
 app.use(bodyParser.json());
 
@@ -29,10 +27,6 @@ mongoose.connect(
   () => console.log("Connected to MongoDB")
 );
 
-// For production
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.resolve(__dirname, "www")));
-}
 
 // Listen to the server
 const port = process.env.PORT || 3000;

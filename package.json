@@ -7,8 +7,7 @@
     "start": "nodemon server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "npm run ionic:build:prod"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Isidora",
   "license": "MIT",
