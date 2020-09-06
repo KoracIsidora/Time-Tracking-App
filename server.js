@@ -29,11 +29,12 @@ mongoose.connect(
 
 // For production
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/www"));
+  app.use(express.static("./client/www"));
 
-  // app.get("*", (req, res) => {
-  //   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  // });
+  app.get('*', function(req, res) {
+    res.sendFile('index.html', {root: './client/www'}
+  );
+  });
 }
 
 // Listen to the server
